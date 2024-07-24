@@ -32,7 +32,7 @@ LHS.place(x=10, y=10)
 
 # PC photo
 photo = PhotoImage(file="./images/pc.png")
-myimage = Label(LHS, image=photo)
+myimage = Label(LHS, image=photo, bg="#fff")
 myimage.place(x=2, y=20)
 
 mysystem = platform.uname()
@@ -141,8 +141,60 @@ brightness= ttk.Scale(RHS,from_=0,to=100,orient=HORIZONTAL,command=brightness_ch
 brightness.place(x=90,y=200)
 brightness.set(sbc.get_brightness()[0])
 
+
+####################Apps###############
+
+
+########################Light--Dark#####################
+button_mode=True
+
+def change_mode():
+    global button_mode
+    if button_mode:
+        LHS.config(bg="#fff")
+        RHD.config(bg="#fff")
+        RHS.config(bg="#fff")
+        l1.config(bg="#fff", fg="#000")
+        l2.config(bg="#fff", fg="#000")
+        l3.config(bg="#fff", fg="#000")
+        l4.config(bg="#fff", fg="#000")
+        l5.config(bg="#fff", fg="#000")
+        l6.config(bg="#fff", fg="#000")
+        system.config(bg="#fff", fg="#000")
+        battery_label.config(bg="#fff")
+        lbl.config(bg="#fff", fg="#000")
+        lbl_plugged.config(bg="#fff", fg="#000")
+        lbl_time.config(bg="#fff", fg="#000")
+        lbl_speaker.config(bg="#fff", fg="#000")
+        lbl_brightness.config(bg="#fff", fg="#000")
+        myimage.config(bg="#fff")
+        button_mode=False
+    else:
+        LHS.config(bg="#6c757d")
+        RHD.config(bg="#6c757d")
+        RHS.config(bg="#6c757d")
+        l1.config(bg="#6c757d")
+        l2.config(bg="#6c757d")
+        l3.config(bg="#6c757d")
+        l4.config(bg="#6c757d")
+        l5.config(bg="#6c757d")
+        l6.config(bg="#6c757d")
+        system.config(bg="#6c757d")
+        battery_label.config(bg="#6c757d")
+        lbl.config(bg="#6c757d")
+        lbl_plugged.config(bg="#6c757d")
+        lbl_time.config(bg="#6c757d")
+        lbl_speaker.config(bg="#6c757d")
+        lbl_brightness.config(bg="#6c757d")
+        myimage.config(bg="#6c757d")
+        
+        button_mode=True
 #############################################
 RHD = Frame(Body, width=470, height=190, bg="#fff", highlightbackground="gray")
 RHD.place(x=330, y=255)
+
+app5_image= PhotoImage(file="./images/switcher.png")
+app5=Button(RHD,image=app5_image,bg="#fff",borderwidth=0,command=change_mode)
+app5.place(x=300,y=50)
 
 root.mainloop()
