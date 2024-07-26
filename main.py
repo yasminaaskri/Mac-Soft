@@ -193,6 +193,11 @@ def change_mode():
 RHD = Frame(Body, width=470, height=190, bg="#fff", highlightbackground="gray")
 RHD.place(x=330, y=255)
 
+app4_image= PhotoImage(file="./images/icon.png")
+app4=Button(RHD,image=app4_image,bg="#fff",borderwidth=0,command=change_mode)
+app4.place(x=200,y=50)
+
+
 app5_image= PhotoImage(file="./images/switcher.png")
 app5=Button(RHD,image=app5_image,bg="#fff",borderwidth=0,command=change_mode)
 app5.place(x=300,y=50)
