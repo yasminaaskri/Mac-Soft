@@ -9,6 +9,8 @@ from ctypes import cast, POINTER
 from comtypes  import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import screen_brightness_control as sbc
+import pyautogui
+from tkinter import filedialog
 
 # Colors
 bg_color = "#343434"
@@ -190,9 +192,19 @@ def change_mode():
         
         button_mode=True
 #############################################
+####################Screenshot###############
+def screenshot():
+    root.iconify()
+    myScreenshot = pyautogui.screenshot()
+    file_path=filedialog.asksaveasfilename(defaultextension='.png')
+    myScreenshot.save(file_path)
+#############################################
 RHD = Frame(Body, width=470, height=190, bg="#fff", highlightbackground="gray")
 RHD.place(x=330, y=255)
 
+app4_image= PhotoImage(file="./images/icon.png")
+app4=Button(RHD,image=app4_image,bg="#fff",borderwidth=0,command=screenshot)
+app4.place(x=200,y=50)
 
 
 app5_image= PhotoImage(file="./images/switcher.png")
