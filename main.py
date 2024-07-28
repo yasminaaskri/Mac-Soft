@@ -202,9 +202,13 @@ def screenshot():
 RHD = Frame(Body, width=470, height=190, bg="#fff", highlightbackground="gray")
 RHD.place(x=330, y=255)
 
-app4_image= PhotoImage(file="./images/icon.png")
-app4=Button(RHD,image=app4_image,bg="#fff",borderwidth=0,command=screenshot)
-app4.place(x=200,y=50)
+# Load and resize the screenshot image
+original_app4_image = Image.open("./images/screeshot.png")
+resized_app4_image = original_app4_image.resize((50, 50))  # Adjust the size as needed
+app4_image = ImageTk.PhotoImage(resized_app4_image)
+
+app4 = Button(RHD, image=app4_image, bg="#fff", borderwidth=0, command=screenshot)
+app4.place(x=200, y=50)
 
 
 app5_image= PhotoImage(file="./images/switcher.png")
