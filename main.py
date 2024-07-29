@@ -191,7 +191,6 @@ def change_mode():
         myimage.config(bg="#6c757d")
         
         button_mode=True
-#############################################
 ####################Screenshot###############
 def screenshot():
     root.iconify()
@@ -204,7 +203,7 @@ RHD.place(x=330, y=255)
 
 # Load and resize the screenshot image
 original_app4_image = Image.open("./images/screeshot.png")
-resized_app4_image = original_app4_image.resize((50, 50))  # Adjust the size as needed
+resized_app4_image = original_app4_image.resize((50, 50))  
 app4_image = ImageTk.PhotoImage(resized_app4_image)
 
 app4 = Button(RHD, image=app4_image, bg="#fff", borderwidth=0, command=screenshot)
