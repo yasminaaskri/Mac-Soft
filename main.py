@@ -197,7 +197,7 @@ def screenshot():
     myScreenshot = pyautogui.screenshot()
     file_path=filedialog.asksaveasfilename(defaultextension='.png')
     myScreenshot.save(file_path)
-#############################################
+###################app icons#####################
 RHD = Frame(Body, width=470, height=190, bg="#fff", highlightbackground="gray")
 RHD.place(x=330, y=255)
 
