@@ -11,7 +11,7 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import screen_brightness_control as sbc
 import pyautogui
 from tkinter import filedialog
-
+import weather
 # Colors
 bg_color = "#343434"
 
@@ -213,5 +213,8 @@ app4.place(x=200, y=50)
 app5_image= PhotoImage(file="./images/switcher.png")
 app5=Button(RHD,image=app5_image,bg="#fff",borderwidth=0,command=change_mode)
 app5.place(x=300,y=50)
+
+app6 = Button(RHD, text="Weather App", bg="#fff", borderwidth=0, command=weather.run_weather_app)
+app6.place(x=100, y=50)
 
 root.mainloop()
