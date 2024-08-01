@@ -20,11 +20,11 @@ def run_weather_app():
     search_label = Label(root, image=search_image, bg="white")
     search_label.place(x=50, y=50)
 
-    textfield = Entry(root, justify="center" ,font=("Arial", 20), bg="white", border=0)   
-    textfield.place(x=80, y=50)
-    textfield.focus()
+    # textfield = Entry(root, justify="center" ,font=("Arial", 20), bg="white", border=0)   
+    # textfield.place(x=80, y=50)
+    # textfield.focus()
 
-    search_icon = PhotoImage(file="./images/search.png")
-    search_button = Button(root, image=search_icon, bg="white", border=0)
-    search_button.place(x=330, y=50)
+    # search_icon = PhotoImage(file="./images/search.png")
+    # search_button = Button(root, image=search_icon, bg="white", border=0)
+    # search_button.place(x=330, y=50)
     root.mainloop()
